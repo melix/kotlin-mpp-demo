@@ -1,5 +1,10 @@
+import utils.Files
+
 fun main() {
-    println("Salut, Frédéric. Fib(90) = ${fib(90)}")
+    println("Salut, Frédéric !. Fib(90) = ${fib(90)}")
+
+    val json = Files.readAllText("./hello.json")
+    println("""Read json : ${json}""")
 }
 
 fun fib(n: Long): Long = fib(n, mutableMapOf())
